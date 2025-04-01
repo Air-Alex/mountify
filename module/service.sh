@@ -38,7 +38,7 @@ case $mountify_mounts in
 esac
 
 # display if on nomount/litemode
-if [ "$KSU_MAGIC_MOUNT" = "true" ] && { [ -f /data/adb/ksu/.nomount ] || [ -f /data/adb/ksu/.notmpfs ]; }; then
+if [ "$KSU_MAGIC_MOUNT" = "true" ] && [ -f /data/adb/ksu/.nomount ]; then
 	mode="$mode | nomount: ✅"
 fi
 if [ "$APATCH_BIND_MOUNT" = "true" ] && [ -f /data/adb/.litemode_enable ]; then 
